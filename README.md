@@ -1,50 +1,86 @@
-# Welcome to your Expo app 👋
+# Movies App 🎬
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Una aplicación móvil multiplataforma para explorar películas, construida con React Native y Expo. Accede a información detallada de películas, elencos, y más.
 
-## Get started
+## Características
 
-1. Install dependencies
+- 🎬 Exploración de películas por categorías (Populares, En cines, Mejor calificadas, Próximamente)
+- 🎭 Información detallada de actores y elenco
+- 🔍 Detalles completos de películas con sinopsis, calificaciones y géneros
+- 📱 Interfaz nativa optimizada para iOS y Android
+- 🎨 Diseño moderno con Tailwind CSS y NativeWind
+
+## Requisitos Previos
+
+- Node.js (v18 o superior)
+- npm o yarn
+- Expo Go (opcional, para desarrollo rápido)
+
+## Instalación
+
+1. Instala las dependencias:
 
    ```bash
    npm install
    ```
 
-2. Start the app
+2. Inicia la aplicación:
 
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+3. Selecciona una opción para abrir la app:
+   - **Android**: Emulador de Android
+   - **iOS**: Simulador de iOS
+   - **Web**: Navegador web
+   - **Expo Go**: Aplicación Expo Go en tu dispositivo
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Scripts Disponibles
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- `npx expo start` - Inicia el servidor de desarrollo
+- `npm run android` - Ejecuta en Android
+- `npm run ios` - Ejecuta en iOS
+- `npm run web` - Ejecuta en web
+- `npm run lint` - Analiza el código con ESLint
 
-## Get a fresh project
+## Estructura del Proyecto
 
-When you're ready, run:
+```
+app/                    # Rutas de la aplicación (file-based routing)
+├── home/              # Pantalla principal
+└── movie/             # Detalle de película
 
-```bash
-npm run reset-project
+core/                   # Lógica de negocio
+├── actions/           # Funciones para obtener datos
+├── api/               # Configuración de API
+
+infrastructure/         # Interfaces y mappers
+├── interfaces/        # Tipos e interfaces TypeScript
+└── mappers/           # Transformación de datos
+
+presentation/           # Componentes UI
+├── components/        # Componentes reutilizables
+└── hooks/             # Custom hooks (useMovie, useMovies)
+
+config/                # Configuración del proyecto
+├── helpers/           # Utilidades
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Tecnologías Principales
 
-## Learn more
+- **React Native** - Framework para desarrollo móvil
+- **Expo** - Plataforma para simplificar desarrollo con React Native
+- **TypeScript** - Tipado estático
+- **React Router** (expo-router) - Navegación basada en rutas
+- **React Query** - Manejo de estado y caché de datos
+- **Axios** - Cliente HTTP
+- **Tailwind CSS + NativeWind** - Estilos
+- **ESLint** - Análisis de código
 
-To learn more about developing your project with Expo, look at the following resources:
+## Documentación
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- [Expo Docs](https://docs.expo.dev/)
+- [React Native](https://reactnative.dev/)
+- [Expo Router](https://docs.expo.dev/routing/introduction/)
+- [React Query](https://tanstack.com/query/latest)
